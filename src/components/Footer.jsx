@@ -86,12 +86,11 @@ const Footer = () => {
           <div className="flex gap-10">
             <ul>
               <li className="text-2xl pb-2 text-black font-semibold">SITEMAP</li>
-              <li className="text-xl font-medium"><Link href="/">Home</Link></li>
-              <li className="text-xl font-medium"><Link href="/about">About us</Link></li>
-              <li className="text-xl font-medium"><Link href="/services">Our Services</Link></li>
-              <li className="text-xl font-medium"><Link href="/projects">Projects</Link></li>
-              <li className="text-xl font-medium"><Link href="/blogs">Blogs</Link></li>
-              <li className="text-xl font-medium"><Link href="/contact-us">Contact</Link></li>
+              <li className="text-xl font-medium"><Link to="/">Home</Link></li>
+              <li className="text-xl font-medium"><Link to="/about">About us</Link></li>
+              <li className="text-xl font-medium"><Link to="/services">Our Services</Link></li>
+              <li className="text-xl font-medium"><Link to="/achievement">Achievement</Link></li>
+              <li className="text-xl font-medium"><Link to="/contact">Contact</Link></li>
             </ul>
             <ul className='space-y-2'>
               <li className="text-2xl pb-2  text-black font-semibold">SOCIAL</li>
