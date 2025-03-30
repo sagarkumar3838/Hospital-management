@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const Card = () => {
+const Card = ({ image, title, description }) => {
   return (
     <StyledWrapper>
       <div className="outer">
@@ -9,9 +9,10 @@ const Card = () => {
         <div className="card">
           <div className="ray" />
           <div className="text">
-            <img src="" alt="img" />
+            <img src={image} alt={title} className="w-[19.5rem] h-[12rem] mb-6 rounded-xl" />
           </div>
-          <div>Views</div>
+          <h2 className="text-sm font-semibold mt-2">{title}</h2>
+          <p className="text-gray-600 mt-1">{description}</p>
           <div className="line topl" />
           <div className="line leftl" />
           <div className="line bottoml" />
@@ -20,7 +21,35 @@ const Card = () => {
       </div>
     </StyledWrapper>
   );
-}
+};
+
+const CardList = () => {
+  const cards = [
+    {
+      image: "/images/card1.jpg",
+      title: "Hospital Management Software ",
+      description: ""
+    },
+    {
+      image: "/images/card2.jpg",
+      title: "Hospital Billing Software",
+      description: ""
+    },
+    {
+      image: "/images/card3.jpg",
+      title: "Implement  Hospital Management System",
+      description: ""
+    }
+  ];
+
+  return (
+    <div className="flex justify-center gap-6 flex-wrap p-6">
+      {cards.map((card, index) => (
+        <Card key={index} {...card} />
+      ))}
+    </div>
+  );
+};
 
 const StyledWrapper = styled.div`
   .outer {
@@ -126,6 +155,7 @@ const StyledWrapper = styled.div`
     right: 10%;
     width: 1px;
     height: 100%;
-  }`;
+  }
+`;
 
-export default Card;
+export default CardList;

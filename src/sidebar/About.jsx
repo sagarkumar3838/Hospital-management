@@ -2,6 +2,10 @@ import React from 'react';
 import { FaUserDoctor, FaFlask, FaAward } from 'react-icons/fa6';
 import { FaHospital } from 'react-icons/fa';
 import Card from '../components/About/Card';
+import CardList from '../components/About/Card';
+import { MarqueeDemo } from "../components/About/MarqueeDemo";
+import { Marquee } from '../components/About/Marquee.jsx';
+
 
 
 const About = () => {
@@ -184,10 +188,12 @@ const About = () => {
       <h1 className='font-bold text-4xl text-center text-blue-500 mb-8'>Latest Blog</h1>
       <div>
         <div className='flex gap-12 justify-center mb-8'>
-          <div><Card/></div>
-          <div><Card/></div>
-          <div><Card/></div>
+          <div><CardList/></div>
           
+        </div>
+        <div>
+        <h1 className='font-bold text-4xl text-center text-blue-500 mb-8 capitalize'>read what our customers say</h1>
+         <div><MarqueeDemo/></div>
         </div>
       </div>
     </section>
